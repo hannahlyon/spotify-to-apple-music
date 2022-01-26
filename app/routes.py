@@ -8,7 +8,12 @@ from app.forms import SpotifyForm
 #     return render_template('app.html', form=form)
 
 @app.route('/', methods=['GET', 'POST'])
+@app.route('/login', methods=['GET', 'POST'])
 def spotify_login():
+    return
+
+@app.route('/spotify', methods=['GET', 'POST'])
+def choose_spotify():
     form = SpotifyForm()
     return render_template('app.html', form=form)
     # results = sp.user_playlists('spotify')

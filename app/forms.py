@@ -1,7 +1,5 @@
-# from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, SelectField
 from flask_wtf import *
-# from flask_wtf.validators import DataRequired
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 
