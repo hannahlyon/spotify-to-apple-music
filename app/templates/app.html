@@ -1,0 +1,12 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.s_playlists.label}} <br>
+            <!-- {{ form.s_playlist }} -->
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+{% endblock %}
