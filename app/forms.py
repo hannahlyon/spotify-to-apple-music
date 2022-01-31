@@ -1,12 +1,12 @@
 from wtforms import StringField, SubmitField, SelectField
 from flask_wtf import *
-import spotipy
+from spotipy import Spotify 
 from spotipy.oauth2 import SpotifyOAuth
 
 class SpotifyForm(FlaskForm):
     # get user's spotify playlists
     scope = "user-library-read"
-    sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope=scope))
+    sp = Spotify(auth_manager=SpotifyOAuth(scope=scope))
     s_playlists = []
     playlists = sp.user_playlists('spotify')
     while playlists:

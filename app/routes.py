@@ -10,7 +10,7 @@ from app.forms import SpotifyForm
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/login', methods=['GET', 'POST'])
 def spotify_login():
-    return
+    return render_template('index.html')
 
 @app.route('/spotify', methods=['GET', 'POST'])
 def choose_spotify():
